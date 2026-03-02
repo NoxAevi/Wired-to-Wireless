@@ -43,3 +43,6 @@ The only problem was I couldn't really find a premade symbol and footprint for t
 I finally decided to search online, and lo and behold, the [first result](https://www.snapeda.com/) was the footprint and symbol I needed. 
 
 Well lesson learned for next time... I guess
+
+
+P.S. Just decided this after posting this journal entry. I guess I'll practice making symbols since it's good for experience, but I'll 100% start from scratch to avoid this mess
