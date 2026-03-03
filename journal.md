@@ -44,5 +44,22 @@ I finally decided to search online, and lo and behold, the [first result](https:
 
 Well lesson learned for next time... I guess
 
-
 P.S. Just decided this after posting this journal entry. I guess I'll practice making symbols since it's good for experience, but I'll 100% start from scratch to avoid this mess
+
+# 3/2/26
+
+### 1.2h
+
+I decided a better way to go about things rather than just jumping in, which would be to start from the source of power and work my way outwards from that. This meant I would start from the battery connector and then work my way through the system (where the natural next step would be the PMIC circuit).
+
+Since there was no symbol for the PMIC I'm using in Kicad, I had to make my own one. Learning from yesterday's failure, I made a footprint that looked much nicer (but took quite a bit more time to create)
+
+There were still some parts that I didn't fully understand about the PMIC chip, but I was still able to generally group pins based on their functions.
+
+<img width="577" height="368" alt="image" src="https://github.com/user-attachments/assets/cc0506ca-0adb-43b9-b9fc-f8bf34abf97b" />
+
+Afterwards I got started on the routing part, starting with the power. When I ran into the D- and D+ pins, I got a bit confused on how I would route them to both the MAX host controller and the PMIC while avoiding both of them using the lines at the same time. However, I realized that the battery would only be charging when not in use, and I could just keep the MAX chip off by default. (Though I would still have to find a MUX)
+
+<img width="976" height="709" alt="image" src="https://github.com/user-attachments/assets/ad48248c-9d76-47b8-9b0e-3798007aee96" />
+
+
