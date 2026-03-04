@@ -63,3 +63,24 @@ Afterwards I got started on the routing part, starting with the power. When I ra
 <img width="976" height="709" alt="image" src="https://github.com/user-attachments/assets/ad48248c-9d76-47b8-9b0e-3798007aee96" />
 
 
+# 3/3/26
+
+### 1h
+
+Started off this session with finding a USB mux as I said I would yesterday, and I settled on the FSUSB42
+
+Luckily, this datasheet was ***so much easier to read*** so I was able to integrate it into what I previous had without any difficulties.
+
+<img width="442" height="393" alt="image" src="https://github.com/user-attachments/assets/ab54d715-cf22-4c23-9f11-6d536d012f54" />
+
+As usual, the TI PMIC was still pretty confusing, but since I've read it multiple times through at this point, I feel like it's a lot more understandable. What took me the most time to figure out while routing the power for this chip was whether the VBUS pin can both be used as an input (for charging the battery) and as an output (at 5V to supply the device)
+
+Anyways, I was able to completely finish routing the power portion of the PMIC, and I'll be able to start routing the nRF chip soon (which would also be when I route the I2C and the rest of the pins for the PMIC that relate to CTR)
+
+<img width="636" height="612" alt="image" src="https://github.com/user-attachments/assets/a0faa2eb-44fe-42a2-b2ad-9151c26d1c3a" />
+
+Finally, I sourced all the components that I used on the JLC parts library (making sure to use basic/extended preferred to avoid the loading fee)
+
+<img width="268" height="200" alt="image" src="https://github.com/user-attachments/assets/9094d7ce-3a02-4469-b296-0c9402cbbe0b" />
+
+
