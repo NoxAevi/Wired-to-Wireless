@@ -83,4 +83,20 @@ Finally, I sourced all the components that I used on the JLC parts library (maki
 
 <img width="268" height="200" alt="image" src="https://github.com/user-attachments/assets/9094d7ce-3a02-4469-b296-0c9402cbbe0b" />
 
+# 3/4/26
+
+### 1.1h
+
+I started with importing the nRF52840 chip (which had a given footprint and symbol), and then I proceeded to look at the documentation for the nRF52 chip. What surprised me however was how there was 600+ pages of documentation all for this one chip (I only read the description before). Most of it seems to just be on the firmware implementation for the chip, luckily (for now).
+
+What I did find surprising though was how Nordic Semicon gives a full copy of the PCB implementation, with all the values for external components neatly in one place (which should make making the schematic a breeze, I hope)
+
+<img width="1115" height="806" alt="image" src="https://github.com/user-attachments/assets/53bb78ea-1d3a-4563-b090-6e7db4b9fc7f" />
+
+However, I then realized that the different packages for the nRF52840 have different numbers of pins. Unfortunately, the footprint for the nRF52840 was a different one than the one I would be using (QFN for ease of routing). Additionally, the pin numbers were wrong, which meant that I wouldn't really be able to use it and the QFN footprint together. Thus, I decided that I would just have to make my own symbol.
+
+With the rest of the time in this session, I started adding all the pins (and their corresponding pin numbers) as well as double checking them to make sure they were correct and then sorting them based on function. At this point, I realized that I forgot to double check the pins on the PMIC symbol I made, so I quickly did that as well this session.
+
+<img width="862" height="633" alt="image" src="https://github.com/user-attachments/assets/e2584047-a0ce-49b1-add1-0e0bfb08dd01" />
+
 
