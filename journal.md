@@ -99,4 +99,22 @@ With the rest of the time in this session, I started adding all the pins (and th
 
 <img width="862" height="633" alt="image" src="https://github.com/user-attachments/assets/e2584047-a0ce-49b1-add1-0e0bfb08dd01" />
 
+# 3/7/26
+
+### 1.3h
+
+I finished the symbol for the nRF52840 varient that I would be using pretty quickly, and then started routing.
+
+<img width="813" height="663" alt="image" src="https://github.com/user-attachments/assets/b78b24f4-3fde-4473-b57b-5aca48c47306" />
+
+However, after I double checked to make sure that the power from the battery would be adequate, I realized that the nRF QFN variant does not have the VDDH pin (so I would be limited to 3V3 rather than being able to supply 4.2V at full charge from the battery)
+
+This meant I unfortunately had to restart the routing that I did start, and use the built-in symbol, and I was able to finish routing the power.
+
+<img width="1008" height="437" alt="image" src="https://github.com/user-attachments/assets/8aa37fbd-7c76-40fb-ba99-4dbc7364dd45" />
+
+I then double checked to make sure that the MAX usb host controller would be able to handle up to 4.2V, but then saw that it could only handle from 3.0-3.6V. I did some thinking to determine what would be the best path moving forward. I came to the conclusion that it would be best to either scrap the PMIC circuit entirely, or instead use an LDO to drop the voltage to 3V3, depending on which would be cheaper or more efficient. Right now I believe that adding an LDO would be the best option, especially since the $3 extra loading fee for having 3 components (charge [might need an LDO], boost to 5V, drop to 3V3) would probably add up to be more.
+
+However, I'll be reusing my own symbol for the nRF52840 variant because it has a footprint that's easier to route, and I wouldn't really need the VDDH pin if I could directly supply 3V3.
+
 
